@@ -1,6 +1,7 @@
 # Drone Swarm Simulation
 
-This package will contain launch files and Python nodes for simulating a basic drone swarm in Gazebo using ROS.
+This package contains launch files and Python nodes for simulating a basic drone swarm in Gazebo using ROS.
+Only 1 agent in first commit, cannot get simulation display working.
 
 ## Usage
 
