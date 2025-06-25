@@ -1,0 +1,13 @@
+<launch>
+  <!-- Load the drone URDF into the parameter server first -->
+  <include file="$(find drone_swarm)/launch/load_description.launch" />
+
+  <!-- Launch Gazebo with an empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+  <!-- Spawn a single drone at the origin -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_drone1" args="-urdf -param robot_description -model drone1 -x 0 -y 0 -z 1" />
+
+  <!-- Start the swarm control node (controls only drone1) -->
+  <node pkg="drone_swarm" type="swarm_control.py" name="swarm_control" output="screen" />
+</launch>

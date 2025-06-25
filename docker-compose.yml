@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  dronesim:
+    build: .
+    container_name: dronesim
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ./catkin_ws:/root/catkin_ws
+    network_mode: host
+    tty: true
+    privileged: true
+    stdin_open: true
+    # Uncomment the next line if using XQuartz for GUI on macOS
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"

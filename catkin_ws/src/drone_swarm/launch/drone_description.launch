@@ -1,0 +1,1 @@
+<param name="robot_description" command="$(find xacro)/xacro '$(find drone_swarm)/urdf/simple_drone.urdf'" />
